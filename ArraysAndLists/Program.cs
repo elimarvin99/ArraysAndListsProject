@@ -12,7 +12,7 @@ namespace ArraysAndLists
             // Create an int Array and populate numbers 1-10
 
             int[] myArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-
+            
             /* Create two Lists of type int.
              * Name one List "evens"
              * Name the other List "odds"
@@ -26,18 +26,30 @@ namespace ArraysAndLists
              *  if a number is even or odd.
              * Then add those numbers to either the evens List
              * or the odds List
-             */                                                                                   //done
-            for (int i = 0; i < 100; i++)
+             */                                                               //done
+
+            foreach (var num in myArray)
             {
-                if (i % 2 == 0)
+                if (num %2 == 0)
                 {
-                    evens.Add(i);
+                    evens.Add(num);
                 }
                 else
                 {
-                    odds.Add(i);
+                    odds.Add(num);
                 }
             }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (myArray[i] % 2 == 0)
+            //    {
+            //        evens.Add(myArray[i]);
+            //    }
+            //    else
+            //    {
+            //        odds.Add(myArray[i]);
+            //    }
+            //}
             /* Now using foeach or for loops,
              * display each List of even and odd numbers
              *
@@ -47,6 +59,9 @@ namespace ArraysAndLists
             {
                 Console.WriteLine(num);
             }
+
+            Console.WriteLine("---------------------");
+
             foreach (var num in odds)
             {
                 Console.WriteLine(num);
